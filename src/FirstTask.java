@@ -2,11 +2,12 @@ import java.util.Scanner;
 public class FirstTask {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int year = sc.nextInt();
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
+        long a = sc.nextLong();
+        long b = sc.nextLong();
+        for (long i = a; i <= b; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
         }
     }
 }
