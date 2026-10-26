@@ -1,22 +1,22 @@
 import java.util.Scanner;
-public class TaskN{
+public class TaskN {
+    public static String transformDigits(int n) {
+        String res = "";
+        String num = "" + n;
+        for (int i = 0; i < num.length(); i++) {
+            int digit = num.charAt(i) - '0';
+            if (digit % 2 == 0) {
+                digit++;
+            } else {
+                digit--;
+            }
+            res = res + digit;
+        }
+        return res;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int b = sc.nextInt();
-        int e = 0;
-        int y = 0;
-        int p = 0;
-        for (int i = 1; i <= b; i++) {
-            int a = sc.nextInt();
-            if (a == 0) {
-                e += 1;
-            } else if (a > 0) {
-                y += 1;
-            }
-            else{
-                p += 1;
-            }
-        }
-        System.out.print(e + " " + y + " " + p + " ");
+        int n = sc.nextInt();
+        System.out.println(transformDigits(n));
     }
 }
