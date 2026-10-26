@@ -1,24 +1,19 @@
 import java.util.Scanner;
-
 public class TaskD {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        long x = scanner.nextLong();
-        int r = scanner.nextInt();
-
-        int a = 0;
-
-        while (x > 0) {
-            long b = x % 10;
-
-            if (b == r) {
-                a++;
+    public static void printMatrix(int n, int m) {
+        int num = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(num + " ");
+                num++;
             }
-
-            x = x / 10;
+            System.out.println();
         }
-
-        System.out.println(a);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        printMatrix(n, m);
     }
 }
