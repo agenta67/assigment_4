@@ -1,19 +1,19 @@
-import java.util.Scanner;
 public class TaskI {
+    public static boolean isArmstrong(int n) {
+        int sum = 0;
+        int num = n;
+        while (num > 0) {
+            int dig = num % 10;
+            sum = sum + dig * dig * dig;
+            num = num / 10;
+        }
+        return sum == n;
+    }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        long a = sc.nextLong();
-        int b = 0;
-        for (long i = 1; i * i <= a; i++) {
-            if (a % i == 0) {
-                if (i * i == a) {
-                    b += 1;
-                } else {
-                    b += 2;
-                }
+        for (int i = 100; i <= 999; i++) {
+            if (isArmstrong(i)) {
+                System.out.print(i + " ");
             }
         }
-
-        System.out.println(b);
     }
 }
