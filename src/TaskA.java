@@ -1,13 +1,15 @@
 import java.util.Scanner;
-public class TaskA {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        long a = sc.nextLong();
-        long b = sc.nextLong();
-        for (long i = a; i <= b; i++) {
-            if (i % 2 == 0) {
-                System.out.print(i + " ");
-            }
+public class TaskA{
+    public static void printStrip(int a, char b){
+        for(int i = 1; i<=a; i++){
+            System.out.print(b);
         }
+    }
+
+
+    public static void main(String[] args){
+        Scanner a = new Scanner(System.in);
+        int n = a.nextInt();
+        printStrip(n,'#');
     }
 }
